@@ -1,0 +1,24 @@
+diff -ur linux-v6.1.y-origin/arch/mips/boot/dts/ingenic/halley5.dts linux-v6.1.y/arch/mips/boot/dts/ingenic/halley5.dts
+--- linux-v6.1.y-origin/arch/mips/boot/dts/ingenic/halley5.dts	2023-09-15 23:02:58.000000000 +0000
++++ linux-v6.1.y/arch/mips/boot/dts/ingenic/halley5.dts	2023-12-22 03:58:13.995893380 +0000
+@@ -221,7 +221,7 @@
+ 	};
+ };
+ 
+-&spi0 {
++&ssi0 {
+ 	status = "disable";
+ 
+ 	pinctrl-names = "default";
+diff -ur linux-v6.1.y-origin/arch/mips/Kbuild.platforms linux-v6.1.y/arch/mips/Kbuild.platforms
+--- linux-v6.1.y-origin/arch/mips/Kbuild.platforms	2023-09-15 23:02:58.000000000 +0000
++++ linux-v6.1.y/arch/mips/Kbuild.platforms	2023-12-22 14:06:16.304040151 +0000
+@@ -11,7 +11,7 @@
+ platform-$(CONFIG_CAVIUM_OCTEON_SOC)	+= cavium-octeon/
+ platform-$(CONFIG_MIPS_COBALT)		+= cobalt/
+ platform-$(CONFIG_MACH_DECSTATION)	+= dec/
+-platform-$(CONFIG_MACH_INGENIC)		+= ingenic/
++#platform-$(CONFIG_MACH_INGENIC)		+= ingenic/
+ platform-$(CONFIG_MIPS_GENERIC)		+= generic/
+ platform-$(CONFIG_MACH_JAZZ)		+= jazz/
+ platform-$(CONFIG_LANTIQ)		+= lantiq/
