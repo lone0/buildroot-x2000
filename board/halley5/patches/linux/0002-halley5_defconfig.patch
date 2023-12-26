@@ -1,0 +1,11 @@
+diff -ur linux-v6.1.y-origin/arch/mips/configs/halley5_defconfig linux-v6.1.y/arch/mips/configs/halley5_defconfig
+--- linux-v6.1.y-origin/arch/mips/configs/halley5_defconfig	2023-09-15 23:02:58.000000000 +0000
++++ linux-v6.1.y/arch/mips/configs/halley5_defconfig	2023-12-26 01:30:18.865801454 +0000
+@@ -104,6 +104,7 @@
+ CONFIG_DEBUG_FS=y
+ CONFIG_PANIC_ON_OOPS=y
+ CONFIG_PANIC_TIMEOUT=10
++CONFIG_SOFTLOCKUP_DETECTOR=y
+ # CONFIG_SCHED_DEBUG is not set
+ # CONFIG_DEBUG_PREEMPT is not set
+ CONFIG_STACKTRACE=y
