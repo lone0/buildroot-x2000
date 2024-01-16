@@ -1,0 +1,12 @@
+diff -ur linux-v6.1.y-origin/arch/mips/boot/Makefile linux-v6.1.y/arch/mips/boot/Makefile
+--- linux-v6.1.y-origin/arch/mips/boot/Makefile	2023-09-15 23:02:58.000000000 +0000
++++ linux-v6.1.y/arch/mips/boot/Makefile	2023-12-25 03:22:41.309963131 +0000
+@@ -117,7 +117,7 @@
+ quiet_cmd_its_cat = CAT     $@
+       cmd_its_cat = cat $(real-prereqs) >$@
+ 
+-$(obj)/vmlinux.its.S: $(addprefix $(srctree)/arch/mips/$(PLATFORM)/,$(ITS_INPUTS)) FORCE
++$(obj)/vmlinux.its.S: $(addprefix $(srctree)/arch/mips/generic/,$(ITS_INPUTS)) FORCE
+ 	$(call if_changed,its_cat)
+ 
+ targets += vmlinux.its
