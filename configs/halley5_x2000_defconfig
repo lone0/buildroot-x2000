@@ -1,10 +1,3 @@
-BR2_HAVE_DOT_CONFIG=y
-BR2_HOST_GCC_AT_LEAST_4_9=y
-BR2_HOST_GCC_AT_LEAST_5=y
-BR2_HOST_GCC_AT_LEAST_6=y
-BR2_HOST_GCC_AT_LEAST_7=y
-BR2_HOST_GCC_AT_LEAST_8=y
-BR2_HOST_GCC_AT_LEAST_9=y
 
 #
 # Target options
@@ -419,14 +412,8 @@ BR2_TARGET_GENERIC_PASSWD_SHA256=y
 # BR2_TARGET_GENERIC_PASSWD_SHA512 is not set
 BR2_TARGET_GENERIC_PASSWD_METHOD="sha-256"
 BR2_INIT_BUSYBOX=y
-# BR2_INIT_SYSV is not set
-# BR2_INIT_OPENRC is not set
-# BR2_INIT_SYSTEMD is not set
-# BR2_INIT_NONE is not set
-# BR2_ROOTFS_DEVICE_CREATION_STATIC is not set
-BR2_ROOTFS_DEVICE_CREATION_DYNAMIC_DEVTMPFS=y
 # BR2_ROOTFS_DEVICE_CREATION_DYNAMIC_MDEV is not set
-# BR2_ROOTFS_DEVICE_CREATION_DYNAMIC_EUDEV is not set
+BR2_ROOTFS_DEVICE_CREATION_DYNAMIC_EUDEV=y
 BR2_ROOTFS_DEVICE_TABLE="system/device_table.txt"
 # BR2_ROOTFS_DEVICE_TABLE_SUPPORTS_EXTENDED_ATTRIBUTES is not set
 # BR2_ROOTFS_MERGED_USR is not set
@@ -1208,22 +1195,7 @@ BR2_PACKAGE_FLASHROM_ARCH_SUPPORTS=y
 # BR2_PACKAGE_GPM is not set
 # BR2_PACKAGE_GPSD is not set
 
-#
-# gptfdisk needs a toolchain w/ C++
-#
-# BR2_PACKAGE_GVFS is not set
-# BR2_PACKAGE_HDDTEMP is not set
-# BR2_PACKAGE_HWDATA is not set
 # BR2_PACKAGE_HWLOC is not set
-# BR2_PACKAGE_INPUT_EVENT_DAEMON is not set
-# BR2_PACKAGE_IPMITOOL is not set
-# BR2_PACKAGE_IRDA_UTILS is not set
-# BR2_PACKAGE_KBD is not set
-# BR2_PACKAGE_LCDPROC is not set
-
-#
-# ledmon needs udev and a toolchain w/ threads
-#
 
 #
 # libiec61850 needs a toolchain w/ C++, threads, dynamic library
@@ -1343,21 +1315,8 @@ BR2_PACKAGE_SEDUTIL_ARCH_SUPPORTS=y
 # BR2_PACKAGE_USB_MODESWITCH is not set
 # BR2_PACKAGE_USB_MODESWITCH_DATA is not set
 
-#
-# usbguard needs a toolchain w/ C++, threads, dynamic library, gcc >= 8
-#
 
-#
-# usbmount requires udev to be enabled
-#
-
-#
-# usbutils needs udev /dev management and toolchain w/ threads, gcc >= 4.9
-#
-# BR2_PACKAGE_W_SCAN is not set
-# BR2_PACKAGE_WILC_DRIVER is not set
-# BR2_PACKAGE_WIPE is not set
-# BR2_PACKAGE_XORRISO is not set
+BR2_PACKAGE_USBUTILS=y
 
 #
 # Interpreter languages and scripting
